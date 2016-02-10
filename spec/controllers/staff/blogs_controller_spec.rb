@@ -1,6 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Admin::BlogsController, type: :controller do
+puts "Staff blogs spec"
+RSpec.describe Staff::BlogsController, type: :controller do
+  let!(:staff) { create :staff }
+  let!(:blog) { create :blog }
   describe 'GET #index' do
     example do
       get :index
@@ -8,7 +11,6 @@ RSpec.describe Admin::BlogsController, type: :controller do
     end
   end
   describe 'GET #show' do
-    let!(:blog) { create :blog }
     example do
       get :show, id: blog
       expect(response).to have_http_status :ok

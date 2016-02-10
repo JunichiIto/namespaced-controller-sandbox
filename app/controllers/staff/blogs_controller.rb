@@ -1,4 +1,5 @@
-class Admin::BlogsController < ApplicationController
+class Staff::BlogsController < StaffController
+  puts "Staff::BlogsController loaded"
   before_action :set_blog, only: [:show]
 
   # GET /blogs
