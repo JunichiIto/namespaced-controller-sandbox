@@ -2,17 +2,16 @@ require 'rails_helper'
 
 puts "Blogs spec"
 RSpec.describe BlogsController, type: :controller do
-  let!(:blog) { create :blog }
+  let!(:blog) { create :blog, :draft }
   describe 'GET #index' do
-    example do
+    it '下書きのブログは含まれない' do
       get :index
-      expect(response).to have_http_status :ok
+      expect(assigns(:blogs)).to eq []
     end
   end
   describe 'GET #show' do
-    example do
-      get :show, id: blog
-      expect(response).to have_http_status :ok
+    it '下書きのブログは表示できない' do
+      expect { get :show, id: blog }.to raise_error ActiveRecord::RecordNotFound
     end
   end
 end

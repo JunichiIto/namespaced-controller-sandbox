@@ -2,18 +2,17 @@ require 'rails_helper'
 
 puts "Staff blogs spec"
 RSpec.describe Staff::BlogsController, type: :controller do
-  let!(:staff) { create :staff }
-  let!(:blog) { create :blog }
+  let!(:blog) { create :blog, :draft }
   describe 'GET #index' do
-    example do
+    it '下書きのブログも含まれる' do
       get :index
-      expect(response).to have_http_status :ok
+      expect(assigns(:blogs)).to eq [blog]
     end
   end
   describe 'GET #show' do
-    example do
+    it '下書きのブログも表示できる' do
       get :show, id: blog
-      expect(response).to have_http_status :ok
+      expect(assigns(:blog)).to eq blog
     end
   end
 end
