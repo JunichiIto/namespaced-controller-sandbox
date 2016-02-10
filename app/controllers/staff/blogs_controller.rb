@@ -1,4 +1,4 @@
-class Staff::BlogsController < StaffController
+class Staff::BlogsController < ApplicationController
   puts "Staff::BlogsController loaded"
   before_action :set_blog, only: [:show]
 

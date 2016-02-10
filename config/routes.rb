@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   namespace :staff do
     resources :blogs, only: %i(index show)
   end
-  root to: 'visitors#index'
+  root to: 'blogs#index'
 end
