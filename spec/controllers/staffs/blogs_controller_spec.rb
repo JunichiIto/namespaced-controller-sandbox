@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-puts "Staff blogs spec"
-RSpec.describe Staff::BlogsController, type: :controller do
+puts "Staffs blogs spec"
+RSpec.describe Staffs::BlogsController, type: :controller do
   let!(:blog) { create :blog, :draft }
   describe 'GET #index' do
     it '下書きのブログも含まれる' do
