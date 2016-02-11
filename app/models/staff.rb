@@ -1,3 +1,3 @@
 class Staff < ActiveRecord::Base
-  puts "Staff loaded"
+  puts "Staff model loaded"
 end

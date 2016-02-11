@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-puts "Staff blogs spec"
+puts "staff/blogs_controller_spec.rb loaded"
 RSpec.describe Staff::BlogsController, type: :controller do
   let!(:blog) { create :blog, :draft }
   describe 'GET #index' do
