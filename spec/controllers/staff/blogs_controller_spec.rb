@@ -11,7 +11,7 @@ RSpec.describe Staff::BlogsController, type: :controller do
   end
   describe 'GET #show' do
     it '下書きのブログも表示できる' do
-      get :show, id: blog
+      get :show, params: { id: blog }
       expect(assigns(:blog)).to eq blog
     end
   end

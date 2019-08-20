@@ -11,7 +11,7 @@ RSpec.describe BlogsController, type: :controller do
   end
   describe 'GET #show' do
     it '下書きのブログは表示できない' do
-      expect { get :show, id: blog }.to raise_error ActiveRecord::RecordNotFound
+      expect { get :show, params: { id: blog } }.to raise_error ActiveRecord::RecordNotFound
     end
   end
 end
