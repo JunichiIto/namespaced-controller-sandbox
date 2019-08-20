@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rails', '5.0.7.2'
+gem 'rails', '5.1.7'
 gem 'sqlite3', '~> 1.3.6'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -18,6 +18,7 @@ group :development do
   gem 'better_errors'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
+  gem 'listen'
 end
 group :development, :test do
   gem 'factory_girl_rails', '4.8.0'
