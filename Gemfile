@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-gem 'rails', '5.1.7'
+gem 'rails', '5.2.3'
 gem 'sqlite3', '~> 1.3.6'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'byebug'
 end
